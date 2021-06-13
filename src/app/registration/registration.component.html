@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div style="text-align: center">
+		<h1>{{message}}</h1>
+	</div>
+	<div class="container">
+		<h2>Registration Form</h2>
+		<form>
+			<fieldset>
+				<legend class="text-center">Valid information is required to register. <span class="req"><small>
+					required *</small></span></legend>
+					<div class="imgcontainer">
+						<img src="img_avatar2.png" alt="Avatar" class="avatar">
+				 	 </div>
+					  <label for="id"><b><span class="req">* </span>ID</b></label>
+					  <input type="text" [(ngModel)]="passenger.id" placeholder="Enter ID" maxlength="28" name="id" required>
+
+					<label for="fname"><b><span class="req">* </span>FirstName</b></label>
+					  <input type="text" [(ngModel)]="passenger.firstName" placeholder="Enter FirstName" maxlength="28" name="fname" required>
+					  
+					  <label for="lname"><b><span class="req">* </span>LastName</b></label>
+					  <input type="text" [(ngModel)]="passenger.lastName" placeholder="Enter LastName" name="lname"  required>
+		  
+					  <label for="email"><b><span class="req">* </span>EmailId</b></label>
+					  <input type="text" [(ngModel)]="passenger.emailId" placeholder="Enter EmailId" name="email" required>
+				  
+					  <label for="psw"><b><span class="req">* </span>Password</b></label>
+					  <input type="password" [(ngModel)]="passenger.password" placeholder="Enter Password" name="psw" required>
+					  
+					  <label for="phn"><b><span class="req">* </span>PhoneNumber</b></label>
+					  <input type="text" [(ngModel)]="passenger.phoneNumber" placeholder="Enter PhoneNumber" name="phn" required>
+
+					  <label for="pnr"><b><span class="req">* </span>pnrNumber</b></label>
+					  <input type="text" [(ngModel)]="passenger.pnrNumber" placeholder="Enter pnrNumber" name="pnr" required>
+				  
+					  <label for="address"><b><span class="req">* </span>Address</b></label>
+					  <input type="text" [(ngModel)]="passenger.address" placeholder="Enter Address" name="address" required>
+				  
+					  <p>Please Enter Account Details:</p>
+					  <form>
+					  <label for="accn"><b><span class="req">* </span>AccountNumber</b></label>
+					  <input type="text" [(ngModel)]="passenger.accountNumbar" placeholder="Enter AccountNumber" name="accn" required>
+				  
+					  <label for="bank"><b><span class="req">* </span>BankName</b></label>
+					  <input type="text" [(ngModel)]="passenger.bankName" placeholder="Enter BankName" name="bank" required>
+				  
+					  <label for="ifsc"><b><span class="req">* </span>ifscCode</b></label>
+					  <input type="text" [(ngModel)]="passenger.ifscNumber" placeholder="Enter ifscCode" name="ifsc" required>
+	  
+					  </form>
+	  
+					  <input class="btn btn-info" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+					  <label>
+						  <input type="checkbox" checked="checked" name="remember"> Remember me
+					  </label>
+				
+				
+				  <div class="containerC" style="background-color:#f1f1f1">
+					<button type="button" class="cancelbtn"><a href="/">Cancel</a></button>
+					<span class="psw">Forgot <a href="#">password?</a></span>
+				  </div>
+			
+
+			</fieldset>
+		</form>
+		</div>
+</body>
+</html>
+ 
+	
