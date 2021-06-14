@@ -37,11 +37,12 @@ import org.springframework.web.bind.annotation.RestController;
 		  
 		  
 		  @GetMapping("/findAllPassenger")
-			public List<Passenger> findAllPassenger(){
-			  return service.getPassenger();		
-			  }
-
+			 public List<Passenger> findAllPassenger(){
+				  return service.getPassenger();		
+				  }
+			  
 		  
+		
 			@GetMapping("/findAllPassenger/{id}")
 			public Optional<Passenger> getPassenger(@PathVariable int id){
 				return service.getPassengerById(id);
@@ -55,11 +56,7 @@ import org.springframework.web.bind.annotation.RestController;
 			    return ResponseEntity.ok("resource saved");
 			}
 			
-			@DeleteMapping("/delete/{id}")
-			public String deletePassenger(@PathVariable int id) {
-				repository.deleteById(id);
-				return "passenger deleted with id: " +id;
-			}
+		
 			
 			
 			// fallback method
@@ -82,7 +79,7 @@ import org.springframework.web.bind.annotation.RestController;
 		}
 		  
 		  @PostMapping("/loginhere") 
-		  public Passenger loginPassenger(@RequestBody Passenger passenger) throws Exception{ 
+		  public String loginPassenger(@RequestBody Passenger passenger) throws Exception{ 
 		String tempEmail = passenger.getEmailId(); 
 		String tempPass = passenger.getPassword();
 		Passenger passengerObj = null; 
@@ -92,7 +89,7 @@ import org.springframework.web.bind.annotation.RestController;
 		  if(passengerObj == null) { 
 			  throw new Exception("Bad Credential"); 
 			  }
-		  return passengerObj; 
+		  return "Welcome"; 
 		  }
 		  
 	}
