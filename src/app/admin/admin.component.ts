@@ -8,6 +8,7 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
 })
 export class AdminComponent implements OnInit {
   passenger: any;
+  flight: any;
 
   constructor(private service:PassengerRegistrationService) { }
 
@@ -24,5 +25,13 @@ export class AdminComponent implements OnInit {
     resp.subscribe((data)=>this.passenger=data);
    }
    
-   
+   getFlightDetails(){
+    let resp=this.service.getFlight();
+    resp.subscribe(data=>this.flight=data);
+   }
+
+   deleteFlight(id:number){
+    let resp= this.service.deleteFlightDetails(id);
+    resp.subscribe((data)=>this.flight=data);
+   }
 }
