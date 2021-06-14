@@ -41,12 +41,11 @@ public class SecurityController {
 		  return service.getPassenger();		
 		  }
 	  
-		@DeleteMapping("/delete/{id}")
-		public String deletePassenger(@PathVariable int id) {
-			repository.deleteById(id);
-			return "passenger deleted with id: " +id;
-		}
-	  
+			/*
+			 * @DeleteMapping("/delete/{id}") public String deletePassenger(@PathVariable
+			 * int id) { repository.deleteById(id); return "passenger deleted with id: "
+			 * +id; }
+			 */
 
 	  
 }

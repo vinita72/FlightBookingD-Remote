@@ -35,6 +35,7 @@ import org.springframework.web.bind.annotation.RestController;
 		  @Autowired 
 		  private PassengerService service;  
 		  
+		
 		  
 		  @GetMapping("/findAllPassenger")
 			 public List<Passenger> findAllPassenger(){
