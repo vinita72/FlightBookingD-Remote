@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +26,7 @@ import com.FlightBookingSystem.FlightDetails.service.FlightService;
 
 		
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/flight")
 public class FligthController {
 
@@ -74,7 +76,7 @@ public class FligthController {
 			}
 		
 			 @PostMapping("/addFlightDetails") 
-			  public FlightDetails RegisterFlightDetails(@RequestBody FlightDetails flightDetails) throws Exception { 
+			  public String RegisterFlightDetails(@RequestBody FlightDetails flightDetails) throws Exception { 
 				 String tempDate = flightDetails.getDate(); 
 					if(tempDate != null && !"".equals(tempDate)) 
 					{
@@ -85,7 +87,7 @@ public class FligthController {
 				 
 			  FlightDetails flightDetailsObj = null; 
 			 flightDetailsObj = service.saveflightDetails(flightDetails); 
-			return flightDetailsObj; 
+			return "Flight Details on Date " +flightDetails.getDate()+" added!";
 			}
 			 
 			 

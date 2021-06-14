@@ -12,6 +12,7 @@ import { PassengerRegistrationService } from './passenger-registration.service';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AddFlightComponent } from './add-flight/add-flight.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     RegistrationComponent,
     HomeComponent,
     AdminComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    AddFlightComponent
   ],
   imports: [
     BrowserModule,

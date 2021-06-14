@@ -34,4 +34,7 @@ export class AdminComponent implements OnInit {
     let resp= this.service.deleteFlightDetails(id);
     resp.subscribe((data)=>this.flight=data);
    }
+
+   
+  
 }

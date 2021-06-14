@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 		// @RequestMapping("/Pass")
-		
+
 		@Autowired
 		 private PassengerRepo repository;
 		
@@ -41,7 +41,11 @@ import org.springframework.web.bind.annotation.RestController;
 				  return service.getPassenger();		
 				  }
 			  
-		  
+		  @DeleteMapping("/delete/{id}")
+			public String deletePassenger(@PathVariable int id) {
+				repository.deleteById(id);
+				return "passenger deleted with id: " +id;
+			}
 		
 			@GetMapping("/findAllPassenger/{id}")
 			public Optional<Passenger> getPassenger(@PathVariable int id){

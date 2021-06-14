@@ -16,6 +16,10 @@ export class PassengerRegistrationService {
     return this.http.post("http://localhost:8989/FlightPassenger/passenger/loginhere/",passenger,{responseType:'text' as 'json'});
   }
 
+  public addFlightDetails(flight:any){
+    return this.http.post("http://localhost:8989/FlightDetails/flight/addFlightDetails/",flight, {responseType:'text' as 'json'});
+
+  }
 
      deletePassengers(id:number){
       return this.http.delete("http://localhost:8989/FlightPassenger/passenger/delete/"+id);
