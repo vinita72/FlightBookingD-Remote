@@ -7,7 +7,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import com.FlightBookingSystem.FlightPassenger.model.Passenger;
 import com.FlightBookingSystem.FlightPassenger.repository.PassengerRepo;
@@ -16,7 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @SpringBootApplication
-@EnableWebSecurity
 @EnableEurekaClient
 @EnableSwagger2
 public class FlightPassengerApplication implements CommandLineRunner{
