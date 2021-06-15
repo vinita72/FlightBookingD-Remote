@@ -31,6 +31,11 @@ public class FlightService {
 	  {
 		  return repository.findByDateAndFromlocationAndTolocation(date, fromlocation, tolocation);
 		  }
+
+	public FlightDetails fetchFlightDetailsByDate(String date) {
+		// TODO Auto-generated method stub
+		  return repository.findByDate(date);
+	}
 	 
 	
 	/*

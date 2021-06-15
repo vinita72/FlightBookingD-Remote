@@ -1,22 +1,72 @@
 package com.FlightBookingSystem.FlightDetails;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.junit.jupiter.api.Test;
+
+
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.FlightBookingSystem.FlightDetails.model.FlightDetails;
+import com.FlightBookingSystem.FlightDetails.repository.FlightRepo;
+import com.FlightBookingSystem.FlightDetails.service.FlightService;
 
 import ch.qos.logback.core.Context;
 
+
+@RunWith(MockitoJUnitRunner.class)
 @SpringBootTest
 class FlightDetailsApplicationTests {
 
    
+	  @Mock 
+	  Context mMockContext;
+	  
+	  
+	  
+		@Autowired
+		  private FlightService service;  
+
+		@MockBean
+		 private FlightRepo repository;
+		
+		@Test
+		public void savePassengerTest() {
+			FlightDetails flightDetails = new FlightDetails(3, "Pune", "Delhi", 30, 2000, "19-July-2021");
+			when(repository.save(flightDetails)).thenReturn(flightDetails);
+			assertEquals(flightDetails, service.saveflightDetails(flightDetails));
+		}
+
+		@SuppressWarnings("unchecked")
+		@Test
+		public void getUserByDateAndFromlocationAndTolocationTest() {
+			String date = "19-July-2021";
+			String fromlocation ="Pune";
+			String tolocation="Delhi";
+			when(repository.findByDateAndFromlocationAndTolocation(date, fromlocation, tolocation))
+					.thenReturn((FlightDetails) Stream.of(new FlightDetails(3, "Pune", "Delhi", 30, 2000, "19-July-2021"))
+							.collect(Collectors.toList()));
+			assertEquals(1, ((List<FlightDetails>) service.fetchFlightDetailsByDateAndFromlocationAndTolocation(date, fromlocation, tolocation)).size());
+		}
 	
-	@Test
-	void readStringFromContext_LocalizedString() {
-	}
+	
 }
+
+
+
+
+
 
 
 /*

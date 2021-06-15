@@ -53,6 +53,7 @@ public class PassengerService {
 		public Passenger fetchPassengerByEmailIdAndPassword(String emailId, String password) {
 			return repository.findByEmailIdAndPassword(emailId, password);
 		}
+		
 	}
 
 //	@Override

@@ -26,8 +26,8 @@ import com.FlightBookingSystem.FlightDetails.service.FlightService;
 
 		
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/flight")
+@CrossOrigin(origins = "http://localhost:4200")
 public class FligthController {
 
 		
@@ -54,6 +54,18 @@ public class FligthController {
 				return repository.findById(id);
 			}
 			
+			
+			/*
+			 * @GetMapping("/findAllFlightDetails/{date}") public Optional<FlightDetails>
+			 * findProductByName1(@PathVariable String date) { return
+			 * repository.findByDate(date); }
+			 * 
+			 */
+			/*
+			 * @GetMapping("/findAllFlightDetail/{date}") public FlightDetails
+			 * findProductByName(@PathVariable String date) { return
+			 * service.fetchFlightByDate(date); }
+			 */
 			
 			/*
 			 * @GetMapping("/findAllFlightDetails/{date}") public Optional<FlightDetails>
@@ -94,7 +106,7 @@ public class FligthController {
 			 
 
 			  @PostMapping("/searchFlightDetails") 
-			  public FlightDetails searchFlightDetails(@RequestBody FlightDetails flightDetails) throws Exception{ 
+			  public String searchFlightDetails(@RequestBody FlightDetails flightDetails) throws Exception{ 
 			 String tempDate = flightDetails.getDate(); 
 			String tempFromlocation = flightDetails.getFromlocation();
 			String tempTolocation = flightDetails.getTolocation();
@@ -106,7 +118,7 @@ public class FligthController {
 				throw new Exception("Not Available");
 				
 			}
-			return flightDetailsObj;
+			return "Below Flights Are Available on" +flightDetails.getDate() +"please select!";
 			  }
 			 
 			
