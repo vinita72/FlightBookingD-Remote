@@ -50,5 +50,18 @@ export class PassengerRegistrationService {
         return this.http.delete("http://localhost:8989/FlightDetails/flight/delete/"+id);
 
       }
+
+      searchFlightDetailsbyid(date:string){
+        return this.http.get("http://localhost:8081/flight/findAllFlightDetail/"+date);
+
+      }
+
+     
+      searchFlightDetails(date :string, fromlocation: string, tolocation: string){
+        const updateData = { date:date, fromlocation: fromlocation, tolocation: tolocation };
+
+        return this.http.post("http://localhost:8081/flight/searchFlightDetails/", updateData);
+
+      }
   }
 

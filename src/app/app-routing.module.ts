@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminComponent } from './admin/admin.component';
+import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { HomeComponent } from './home/home.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'admin-login', component:AdminLoginComponent},
   {path:'admin', component:AdminComponent},
-  {path:'add-flight', component:AddFlightComponent}
+  {path:'add-flight', component:AddFlightComponent},
+  {path:'flight-search',component:FlightSearchComponent},
+  {path:'login-page', component:LoginPageComponent}
 ];
 
 @NgModule({

@@ -4,7 +4,10 @@
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-sm-4 col-xs-12">
-						<div id="gtco-logo"><a href="index.html"><i>Boieng.</i><em>.</em></a></div>
+						<div id="gtco-logo"><a href="#"><i>Boieng.</i><em>.</em></a>
+
+						</div>
+
 					</div>
 					<button style="width:auto;" ><a href ="/admin-login">Admin Login</a></button>
 					
@@ -34,25 +37,25 @@
 						<div class="col-xxs-12 col-xs-6 mt">
 							<div class="input-field">
 								<label for="from">From:</label>
-								<input type="text" class="form-control" id="from-place" placeholder="Pune, IN"/>
+								<input type="text"  class="form-control" [(ngModel)]="flight.fromlocation" id="from-place" placeholder="Pune, IN"/>
 							</div>
 						</div>
 						<div class="col-xxs-12 col-xs-6 mt">
 							<div class="input-field">
 								<label for="from">To:</label>
-								<input type="text" class="form-control" id="to-place" placeholder="Delhi, IN"/>
+								<input type="text" class="form-control" [(ngModel)]="flight.tolocation" id="to-place" placeholder="Delhi, IN"/>
 							</div>
 						</div>
 						<div class="col-xxs-12 col-xs-6 mt alternate">
 							<div class="input-field">
 								<label for="date-start">Date</label>
-								<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+								<input type="text" class="form-control"  id="date-start" placeholder="mm/dd/yyyy"/>
 							</div>
 						</div>
 						
 						
 						<div class="col-xs-12">
-							<input type="submit" class="btn btn-primary btn-block" value="Search Flight">
+						<a href="/flight-search"><input type="submit"  class="btn btn-primary btn-block"  value="Search Flight" ></a>
 						</div>
 					</div>
 				 </div>
@@ -63,4 +66,29 @@
 			</div>
 		</div>
 	</div>
+
+		
 </div>
+
+
+
+
+
+<div id=slideset1>
+	<div>
+	  <h1><i>Welcome to Boieng</i></h1>
+	  <h2>Entry Guidelines for all passengers traveling.</h2>
+	  <p>KNOW MORE. |It is mandatory to carry a negative RT-PCR test report with QR code for any travel ex India effective 22nd May 2021.KNOW MORE. 
+		  </p>
+	</div>
+	<div>
+	  <h2>Passenger can search the Flights without LogIn. Please do register or LogIn while booking your Flight</h2>
+	</div>
+  </div>
+
+<div id=slideset2>
+	<div>
+		<p>|It is mandatory for all passengers to wear mask,ensure hand hygiene and maintain social distancing at all times during air travel .KNOW MORE. |Web Check -In & Mobile Check-In is temporarily suspended for flights departing from United Kingdom until further notice. || All passengers have to be web checked in/pre checked in before arriving at the airport. |</p>
+	</div>
+  </div>
+

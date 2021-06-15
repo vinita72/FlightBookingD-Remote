@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
+import { FlightSearchComponent } from './flight-search/flight-search.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AddFlightComponent } from './add-flight/add-flight.component';
     HomeComponent,
     AdminComponent,
     AdminLoginComponent,
-    AddFlightComponent
+    AddFlightComponent,
+    FlightSearchComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
