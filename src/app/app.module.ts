@@ -16,6 +16,8 @@ import { AddFlightComponent } from './add-flight/add-flight.component';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BookingComponent } from './booking/booking.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AdminLoginComponent,
     AddFlightComponent,
     FlightSearchComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    BookingComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

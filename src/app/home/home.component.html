@@ -36,38 +36,114 @@
 						<div class="col-xxs-12 col-xs-6 mt">
 							<div class="input-field">
 								<label for="from">From:</label>
-								<input type="text"  class="form-control" [(ngModel)]="flight.fromlocation" id="from-place" placeholder="Pune, IN"/>
+								<input type="text"  class="form-control" id="from-place" placeholder="Pune, IN"/>
 							</div>
 						</div>
 						<div class="col-xxs-12 col-xs-6 mt">
 							<div class="input-field">
 								<label for="from">To:</label>
-								<input type="text" class="form-control" [(ngModel)]="flight.tolocation" id="to-place" placeholder="Delhi, IN"/>
+								<input type="text" class="form-control" id="to-place" placeholder="Delhi, IN"/>
 							</div>
 						</div>
-						<div class="col-xxs-12 col-xs-6 mt alternate">
+					
+					
+							<div class="col-xxs-12 col-xs-6 mt alternate">
 							<div class="input-field">
 								<label for="date-start">Date</label>
-								<input type="text" class="form-control"  id="date-start" placeholder="mm/dd/yyyy"/>
+
+								<input type="text" class="form-control" [(ngModel)]="date" id="date-start" placeholder="mm/dd/yyyy"/>
 							</div>
 						</div>
 						
 						
 						<div class="col-xs-12">
-						<a href="/flight-search"><input type="submit"  class="btn btn-primary btn-block"  value="Search Flight" ></a>
+						<a href="/flight-search"><input type="submit"  class="btn btn-primary btn-block" value="Search Flight" ></a>
 						</div>
-					</div>
-				 </div>
-			</div>
 
-
+					
+				</div>
 
 			</div>
 		</div>
+
 	</div>
 
 		
 </div>
+
+				<!--
+<div class="container">
+						<div class="row">
+								   <div id="custom-search-input">
+													<div class="input-group col-md-12" style="text-align: center">
+														<input type="text" class="search-query form-control" placeholder="Search With date Address"  name="date" [(ngModel)]="date"/>
+														<span class="input-group-btn">
+															<button class="btn btn-danger" type="button" (click)="findUserByDate()">
+																<span class=" glyphicon glyphicon-search"></span>
+															</button>
+														</span>
+													</div>
+												</div>
+							</div>
+				 	</div>
+
+
+			
+
+
+
+
+<div class="container">
+<table class="table">
+    <thead>
+        <tr>
+    <th>Id</th>
+    <th>FromLocation</th>
+    <th>ToLocation</th>
+    <th>TotalSeats</th>
+    <th>Price/Fare</th>
+    <th>Date</th>
+   
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let flight of flight">
+            <td>{{flight.id}}</td>
+            <td>{{flight.fromlocation}}</td>
+            <td>{{flight.tolocation}}</td>
+            <td>{{flight.totalseats}}</td>
+            <td>{{flight.price}}</td>
+            <td>{{flight.date}}</td>
+            
+            <td class="text-center" ><button class="btn btn-danger btn-xs" ><a href="/login-page" style="color: aliceblue;"><span class="glyphicon glyphicon-remove"></span> BookNow</a></button></td>
+          </tr>
+
+    </tbody>
+</table>
+</div>
+
+
+				-->	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <marquee behavior="scroll" direction="left" style="margin-top: 50px; color: blue; animation: marquee 7s;">

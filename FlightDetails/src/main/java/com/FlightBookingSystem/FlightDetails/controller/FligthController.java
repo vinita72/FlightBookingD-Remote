@@ -54,7 +54,17 @@ public class FligthController {
 				return repository.findById(id);
 			}
 			
+			   @GetMapping("/findAllFlightDetail/{date}")
+			    public FlightDetails getFlightDetails(@PathVariable String date) {
+			        return repository.findByDate(date);
+			    }
 			
+			   
+			    @PutMapping("/update")
+			    public FlightDetails updateFlight(@RequestBody FlightDetails flightDetails) {
+			        return service.updateFlightDetails(flightDetails);
+			    }
+			    
 			/*
 			 * @GetMapping("/findAllFlightDetails/{date}") public Optional<FlightDetails>
 			 * findProductByName1(@PathVariable String date) { return

@@ -36,7 +36,7 @@ public class SecurityController {
 		public String login(){
 			return "authenticated successfully" ;
 		}
-	  @GetMapping("/findAllPassenger")
+	  @GetMapping("/findAllPassengers")
 	 public List<Passenger> findAllPassenger(){
 		  return service.getPassenger();		
 		  }

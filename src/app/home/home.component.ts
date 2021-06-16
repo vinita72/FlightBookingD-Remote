@@ -10,12 +10,9 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  flight!:any;
  date!:string;
- fromlocation!:string;
- tolocation!:string;
-  message: any;
-  flight: Flight = new Flight(0, "","",0,0,"",);
+  message!: any;
   constructor(private service:PassengerRegistrationService, private router:Router) { }
   ngOnInit(): void {
   }
@@ -27,5 +24,10 @@ export class HomeComponent implements OnInit {
      this.router.navigate(["/flight-search"])
     });
   }
+
+  //public findUserByDate(){
+    //let resp= this.service.getPassengerByDate(this.date);
+  //  resp.subscribe((data)=>this.flight=data);
+  // }
  
 }

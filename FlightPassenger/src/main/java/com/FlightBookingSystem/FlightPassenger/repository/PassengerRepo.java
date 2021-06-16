@@ -16,4 +16,5 @@ public interface PassengerRepo extends MongoRepository<Passenger, Integer>{
 		
 	public Passenger findByEmailIdAndPassword(String emailId, String password);
 
+
 }

@@ -1,0 +1,24 @@
+<div class="container">
+    <button type="button" class="btn btn-primary">FindUsers</button>
+</div>
+<div class="container">
+    <table class="table">
+       <thead>
+           <tr>
+       <th>Id</th>
+       <th>EmailId</th>
+       <th>Price</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let passenger of passenger">
+               <td>{{passenger.id}}</td>
+               <td>{{passenger.emailId}}</td>
+               <td class="text-center"><button class="btn btn-danger btn-xs" ><span class="glyphicon glyphicon-remove"></span> Pay</button></td>
+             </tr>
+        <tr *ngFor ="let flight of flight">
+            <td>{{flight.price}}</td>
+        </tr>
+       </tbody>
+   </table>
+</div>

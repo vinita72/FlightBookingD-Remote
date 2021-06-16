@@ -36,6 +36,16 @@ public class FlightService {
 		// TODO Auto-generated method stub
 		  return repository.findByDate(date);
 	}
+	
+	 public FlightDetails updateFlightDetails(FlightDetails flightDetails) {
+		 FlightDetails existingFlightDetails = repository.findById(flightDetails.getId()).orElse(null);
+	        existingFlightDetails.setFromlocation(flightDetails.getFromlocation());
+	        existingFlightDetails.setTolocation(flightDetails.getTolocation());
+	        existingFlightDetails.setTotalseats(flightDetails.getTotalseats());
+	        existingFlightDetails.setPrice(flightDetails.getPrice());
+	        existingFlightDetails.setDate(flightDetails.getDate());
+	        return repository.save(existingFlightDetails);
+	    }
 	 
 	
 	/*

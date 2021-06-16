@@ -18,4 +18,10 @@ export class FlightSearchComponent implements OnInit {
     resp.subscribe(data=>this.flight=data);
    }
  
+
+   public findUserByDate(){
+    let resp= this.service.getPassengerByDate(this.date);
+    resp.subscribe((data)=>this.flight=data);
+   }
+ 
   }

@@ -35,7 +35,7 @@ export class PassengerRegistrationService {
         let username='Java'
         let password='Password'
         const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-      return  this.http.get("http://localhost:8085/findAllPassenger",{headers});
+      return  this.http.get("http://localhost:8085/findAllPassengers",{headers});
       }
 
 
@@ -63,5 +63,17 @@ export class PassengerRegistrationService {
         return this.http.post("http://localhost:8081/flight/searchFlightDetails/", updateData);
 
       }
+
+
+      
+        public getPassengerByDate(date: string){
+          return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetail/"+date);
+        }
+
+        updateFlightDetails(flight:any){
+          return this.http.put("http://localhost:8989/FlightDetails/flight/update/",flight);
+
+        }
+    
   }
 
