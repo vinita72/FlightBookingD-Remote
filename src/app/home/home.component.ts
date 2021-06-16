@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Flight } from '../flight';
 import { PassengerRegistrationService } from '../passenger-registration.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

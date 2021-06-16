@@ -15,6 +15,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [PassengerRegistrationService],
   bootstrap: [AppComponent]

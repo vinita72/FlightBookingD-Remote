@@ -5,4 +5,9 @@
     <fullyQualifiedTypeName name="com.FlightBookingSystem.FlightAdmin.service.PassengerService"/>
     <fullyQualifiedTypeName name="com.FlightBookingSystem.FlightAdmin.repository.PassengerRepo"/>
     <fullyQualifiedTypeName name="com.FlightBookingSystem.FlightAdmin.model.Passenger"/>
+    <fullyQualifiedTypeName name="com.FlightBookingSystem.FlightDetails.service.FlightService"/>
+    <fullyQualifiedTypeName name="com.FlightBookingSystem.FlightDetails.repository.FlightRepo"/>
+    <fullyQualifiedTypeName name="com.FlightBookingSystem.FlightDetails.model.FlightDetails"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 </qualifiedTypeNameHistroy>

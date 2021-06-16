@@ -259,40 +259,39 @@ div.cs-select span {
 
 
 
-#slideset1 {
-  height: 10em;
-  color: blue;
-   position: relative;
-   margin-left: 100px;
-   margin-top: 200px;
-   margin-right: 100px;
+
+.wrapper {
+  padding-top: 20px;
+  max-width: 100%;
 }
-#slideset1 > * {visibility: hidden; position: absolute;
-  top: 0; left: 0; animation: 9s autoplay1 infinite}
-  @keyframes autoplay1 {
-    0% {visibility: visible}
-    33.33% {visibility: hidden}
-  }
 
-  #slideset1 > *:nth-child(1) {animation-delay: 0s}
-#slideset1 > *:nth-child(2) {animation-delay: 5s}
-
-
-
-#slideset2 {
+.marquee {
   color: blue;
-  margin-right: 100px;
-
-  height: 10em;
-   position: relative;
-   margin-left: 100px;
+  white-space: nowrap;
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 7s linear infinite;
 }
-#slideset2 > * {visibility: hidden; position: absolute;
-  top: 0; left: 0; animation: 9s autoplay1 infinite}
-  @keyframes autoplay1 {
-    0% {visibility: visible}
-    33.33% {visibility: hidden}
-  }
 
-  #slideset2 > *:nth-child(1) {animation-delay: 0s}
-#slideset2 > *:nth-child(2) {animation-delay: 5s}
+.marquee p {
+  display: inline-block;
+  animation-delay: 2.5s;
+
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+
+
+
+
+
