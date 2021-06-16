@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import{ HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -15,7 +16,6 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BookingComponent } from './booking/booking.component';
 import { UpdateComponent } from './update/update.component';
 

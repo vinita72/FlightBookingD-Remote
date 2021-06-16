@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PassengerRegistrationService } from '../passenger-registration.service';
-
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent implements OnInit {
+  faEnvelope = faEnvelope;
+  faPlane =faPlane;
+  faPhone=faPhone;
   username!: string;
   password!: string;
   message: any

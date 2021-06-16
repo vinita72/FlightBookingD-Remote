@@ -1,9 +1,51 @@
+body{
+	font-family: 'PT Serif', serif;	
+}
+.row{
+	margin: 10px;
+}
+.space{
+	margin: 20px;
+}
+
+
+.headercontaint1 ,.headercontaint2 p{
+	color: rgb(248, 237, 237);
+  
+	font-size: 16px;
+}
+header{
+	padding-top: 13px;
+	background-color:rgb(7, 6, 6);
+	height: 60px;
+}
+.headercontaint1{
+	text-align: left;
+	float: left;
+  overflow: hidden;
+}
+
+.headercontaint2{
+	text-align: right;
+	float: right;
+    overflow: hidden;
+}
+.mainheader {
+	padding: 20px;
+}
+
+
+
+
+
+
+
 body {font-family: Arial, Helvetica, sans-serif;}
 .container{
-  
     padding: 100px;
-    margin: 100px;
-    padding-left: 300px;
+    margin: 50px;
+    padding-left: 400px;
+    
 }
 
 .page {
@@ -23,7 +65,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   max-width: 1100px;
   position: relative;
   margin: 0 auto;
-  padding-left: 200px;
+  padding-left: 300px;
   padding-right: 15px;
 }
 
@@ -288,6 +330,9 @@ div.cs-select span {
     transform: translate3d(-50%, 0, 0);
   }
 }
+
+
+
 
 
 

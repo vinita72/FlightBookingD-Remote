@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Flight } from '../flight';
 import { PassengerRegistrationService } from '../passenger-registration.service';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,6 +13,9 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  faEnvelope = faEnvelope;
+  faPlane =faPlane;
+  faPhone=faPhone;
   flight!:any;
  date!:string;
   message!: any;

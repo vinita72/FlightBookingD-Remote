@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PassengerRegistrationService } from '../passenger-registration.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class AdminComponent implements OnInit {
   passenger: any;
   flight: any;
 
-  constructor(private service:PassengerRegistrationService) { }
+  constructor(private service:PassengerRegistrationService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -35,6 +36,13 @@ export class AdminComponent implements OnInit {
     resp.subscribe((data)=>this.flight=data);
    }
 
-   
+
+   update(){
+    this.router.navigate(['update']);
+  }
+   updateFlight(){
+    let resp= this.service.updateFlightDetails(this.flight);
+    resp.subscribe((data)=>this.flight=data);
+   }
   
 }

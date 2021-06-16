@@ -1,0 +1,39 @@
+
+<div class="container">
+    <h2>Add Flight Details</h2>
+    <form>
+        <fieldset>
+            <legend class="text-center">Flight Details Updation Form<span class="req"><small>
+                required *</small></span></legend>
+    
+                  <label for="id"><b><span class="req">* </span>ID</b></label>
+                  <input type="text" [(ngModel)]="flight.id" placeholder="Enter ID" maxlength="28" name="id" required>
+
+                <label for="from"><b><span class="req">* </span>From-Location</b></label>
+                  <input type="text" [(ngModel)]="flight.fromlocation" placeholder="Enter From-Location" maxlength="28" name="from" required>
+                  
+                  <label for="to"><b><span class="req">* </span>To-Location</b></label>
+                  <input type="text" [(ngModel)]="flight.tolocation" placeholder="Enter To-Location" name="to"  required>
+      
+                  <label for="seats"><b><span class="req">* </span>Total Seats</b></label>
+                  <input type="text" [(ngModel)]="flight.totalseats" placeholder="Enter Total Seats Number" name="seats" required>
+              
+                  <label for="price"><b><span class="req">* </span>Price</b></label>
+                  <input type="text" [(ngModel)]="flight.price" placeholder="Enter Price/Fare" name="price" required>
+                  
+                  <label for="dte"><b><span class="req">* </span>Date</b></label>
+                  <input type="text" [(ngModel)]="flight.date" placeholder="Enter Date" name="dte" required>
+
+        
+                  <input class="btn btn-info" type="submit" click="updateFlight()" name="submit_reg" value="Add-FlightDetails">
+            
+            
+              <div class="containerC" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn"><a href="/admin">Save and Back</a></button>
+              </div>
+        
+
+        </fieldset>
+    </form>
+
+</div>
