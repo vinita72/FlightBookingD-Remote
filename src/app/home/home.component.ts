@@ -5,6 +5,9 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faPlane } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import {faComment } from '@fortawesome/free-solid-svg-icons';
+import {faHashtag } from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -16,6 +19,9 @@ export class HomeComponent implements OnInit {
   faEnvelope = faEnvelope;
   faPlane =faPlane;
   faPhone=faPhone;
+  faHashtag=faHashtag;
+  faComment=faComment;
+
   flight!:any;
  date!:string;
   message!: any;
