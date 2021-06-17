@@ -119,6 +119,7 @@ p {
   margin: 0;
   list-style: none;
   display: inline;
+  
 }
 .gtco-nav ul li a {
   font-size: 16px;
@@ -129,10 +130,7 @@ p {
   transition: 0.3s;
 }
 
-button{
-  padding: 5px;
-  margin: 5px;
-}
+
 
 
 
@@ -150,6 +148,7 @@ button{
 .tabulation label {
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
+  
 }
 @media screen and (max-width: 480px) {
   .tabulation label {
@@ -202,7 +201,7 @@ button{
   padding: 30px;
 }
 .tab-content .btn {
-  border: 1px solid red !important;
+  border: 1px solid rgb(255, 255, 255) !important;
 }
 
 .nav-tabs {
