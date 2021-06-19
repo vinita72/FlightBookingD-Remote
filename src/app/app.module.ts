@@ -31,7 +31,7 @@ import { UpdateComponent } from './update/update.component';
     FlightSearchComponent,
     LoginPageComponent,
     BookingComponent,
-    UpdateComponent
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,

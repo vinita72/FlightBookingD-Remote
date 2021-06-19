@@ -1,4 +1,49 @@
+
+
 <div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+        <th>Id</th>
+        <th>FromLocation</th>
+        <th>ToLocation</th>
+        <th>TotalSeats</th>
+        <th>Price/Fare</th>
+        <th>Date</th>
+       
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flight">
+                <td>{{flight.id}}</td>
+                <td>{{flight.fromlocation}}</td>
+                <td>{{flight.tolocation}}</td>
+                <td>{{flight.totalseats}}</td>
+                <td>{{flight.price}}</td>
+                <td>{{flight.date}}</td>
+                
+                <td class="text-center" ><button class="btn btn-danger btn-xs" ><a href="/booking" style="color: aliceblue;"><span class="glyphicon glyphicon-remove"></span> BookNow</a></button></td>
+              </tr>
+    
+        </tbody>
+    </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
     <button type="button" class="btn btn-primary">FindUsers</button>
 </div>
 <div class="container">
@@ -21,4 +66,4 @@
         </tr>
        </tbody>
    </table>
-</div>
+</div> -->

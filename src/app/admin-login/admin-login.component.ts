@@ -13,8 +13,8 @@ export class AdminLoginComponent implements OnInit {
   faEnvelope = faEnvelope;
   faPlane =faPlane;
   faPhone=faPhone;
-  username!: string;
-  password!: string;
+  adminusername!: string;
+  adminpassword!: string;
   message: any
   constructor(private service: PassengerRegistrationService, private router:Router) { }
 
@@ -22,7 +22,7 @@ export class AdminLoginComponent implements OnInit {
   }
 
   doLogin() {
-    let resp = this.service.login(this.username, this.password);
+    let resp = this.service.login(this.adminusername, this.adminpassword);
     resp.subscribe(data => {
       this.message = data;
      this.router.navigate(["/admin"])

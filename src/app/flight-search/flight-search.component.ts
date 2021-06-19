@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PassengerRegistrationService } from '../passenger-registration.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
 export class FlightSearchComponent implements OnInit {
   flight: any;
   date:any;
-  constructor(private service:PassengerRegistrationService) { }
+  message:any;
+  constructor(private service:PassengerRegistrationService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -24,4 +26,12 @@ export class FlightSearchComponent implements OnInit {
     resp.subscribe((data)=>this.flight=data);
    }
  
+   booking() {
+    let resp = this.service.updateFlightDetails(this.flight);
+    resp.subscribe(data => {
+      this.message = data;
+     this.router.navigate(["/booking"])
+    });
+  }
+
   }

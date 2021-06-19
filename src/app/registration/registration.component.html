@@ -24,21 +24,38 @@
 						<img src="img_avatar2.png" alt="Avatar" class="avatar">
 				 	 </div>
 					  <label for="id"><b><span class="req">* </span>ID</b></label>
-					  <input type="text" [(ngModel)]="passenger.id" placeholder="Enter ID" maxlength="28" name="id" required>
+					  <input type="text" [(ngModel)]="users.id" placeholder="Enter ID" maxlength="28" name="id" required>
 
-					<label for="fname"><b><span class="req">* </span>FirstName</b></label>
-					  <input type="text" [(ngModel)]="passenger.firstName" placeholder="Enter FirstName" maxlength="28" name="fname" required>
+					<label for="fname"><b><span class="req">* </span>UserName</b></label>
+					  <input type="text" [(ngModel)]="users.username" placeholder="Enter FirstName" maxlength="28" name="fname" required>
 					  
-					  <label for="lname"><b><span class="req">* </span>LastName</b></label>
-					  <input type="text" [(ngModel)]="passenger.lastName" placeholder="Enter LastName" name="lname"  required>
-		  
 					  <label for="email"><b><span class="req">* </span>EmailId</b></label>
-					  <input type="text" [(ngModel)]="passenger.emailId" placeholder="Enter EmailId" name="email" required>
+					  <input type="text" [(ngModel)]="users.emailid" placeholder="Enter EmailId" name="email" required>
 				  
 					  <label for="psw"><b><span class="req">* </span>Password</b></label>
-					  <input type="password" [(ngModel)]="passenger.password" placeholder="Enter Password" name="psw" required>
+					  <input type="password" [(ngModel)]="users.password" placeholder="Enter Password" name="psw" required>
 					  
-					  <label for="phn"><b><span class="req">* </span>PhoneNumber</b></label>
+			
+	  
+					  <input class="btn btn-info" style="margin-top: 20px; background-color: rgb(49, 3, 250); margin-bottom: 20px; width: 30%; height: 50px;" type="submit" 
+					  name="submit_reg" value="Register" (click)="registerNow()">
+					  
+				
+				
+				  <div class="containerC" style="background-color:#f1f1f1; width: 100%;">
+					<button type="button" class="cancelbtn"><a href="/">Cancel</a></button>
+					<span class="psw">Back To <a href="/">Home</a></span>
+				  </div>
+			
+
+			</fieldset>
+		</form>
+		</div>
+</body>
+</html>
+ 
+		<!--
+ <label for="phn"><b><span class="req">* </span>PhoneNumber</b></label>
 					  <input type="text" [(ngModel)]="passenger.phoneNumber" placeholder="Enter PhoneNumber" name="phn" required>
 
 					  <label for="pnr"><b><span class="req">* </span>pnrNumber</b></label>
@@ -59,21 +76,5 @@
 					  <input type="text" [(ngModel)]="passenger.ifscNumber" placeholder="Enter ifscCode" name="ifsc" required>
 	  
 					  </form>
-	  
-					  <input class="btn btn-info" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
-					  
-				
-				
-				  <div class="containerC" style="background-color:#f1f1f1">
-					<button type="button" class="cancelbtn"><a href="/">Cancel</a></button>
-					<span class="psw">Back To <a href="/">Home</a></span>
-				  </div>
-			
 
-			</fieldset>
-		</form>
-		</div>
-</body>
-</html>
- 
-	
+				-->	 

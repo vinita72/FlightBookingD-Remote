@@ -20,7 +20,7 @@
 
 
 
-<div class="container">
+<div class="container" >
 	<div class="Page">
 	
 		
@@ -65,13 +65,13 @@
 						<div class="col-xxs-12 col-xs-6 mt">
 							<div class="input-field">
 								<label for="from">From:</label>
-								<input type="text"  class="form-control" id="from-place" placeholder="Pune, IN"/>
+								<input type="text"  [(ngModel)]="flight.fromlocation" class="form-control" id="from-place" placeholder="Pune, IN"/>
 							</div>
 						</div>
 						<div class="col-xxs-12 col-xs-6 mt">
 							<div class="input-field">
 								<label for="from">To:</label>
-								<input type="text" class="form-control" id="to-place" placeholder="Delhi, IN"/>
+								<input type="text" [(ngModel)]="flight.tolocation" class="form-control" id="to-place" placeholder="Delhi, IN"/>
 							</div>
 						</div>
 					
@@ -80,7 +80,7 @@
 							<div class="input-field">
 								<label for="date-start">Date</label>
 
-								<input type="text" class="form-control" [(ngModel)]="date" id="date-start" placeholder="mm/dd/yyyy"/>
+								<input type="text" class="form-control" [(ngModel)]="flight.date" id="date-start" placeholder="mm/dd/yyyy"/>
 							</div>
 						</div>
 						
@@ -89,7 +89,6 @@
 						<a href="/flight-search"><input type="submit"  class="btn btn-primary btn-block" value="Search Flight" ></a>
 						</div>
 
-					
 				</div>
 
 			</div>
@@ -167,7 +166,7 @@
 
 
 <marquee behavior="scroll" direction="left" style="margin-top: 50px; color: blue; animation: marquee 7s;">
-<b>Welcome to Boieng! </b> </marquee>
+<b>Welcome to <i style="color:   #7a3dd6;">Boieng!</i> </b> </marquee>
 
 <div class="wrapper">
 	<div class="marquee">

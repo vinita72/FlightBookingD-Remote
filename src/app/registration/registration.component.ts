@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import{Passenger} from '../passenger'
 import { PassengerRegistrationService } from '../passenger-registration.service';
+import { Users } from '../users';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -8,13 +8,13 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
 })
 export class RegistrationComponent implements OnInit {
   message: any;
-  passenger: Passenger = new Passenger(0, "","","",0,0,"","","","");
+  users: Users = new Users("","","","","");
   constructor(private service:PassengerRegistrationService) { }
 
   ngOnInit(): void {
   }
   public registerNow(){
-    let resp=this.service.doRegistration(this.passenger);
+    let resp=this.service.doRegistration(this.users);
     resp.subscribe((data)=>this.message=data);
       }
 }

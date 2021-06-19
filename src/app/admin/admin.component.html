@@ -24,29 +24,19 @@
             <thead>
                 <tr>
             <th>Id</th>
-            <th>FirstName</th>
-            <th>LastName</th>
+            <th>UserName</th>
             <th>EmailId</th>
             <th>Password</th>
-            <th>PhoneNumber</th>
-            <th>pnrNumber</th>
-            <th>Address</th>
+            <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let passenger of passenger">
-                    <td>{{passenger.id}}</td>
-                    <td>{{passenger.firstName}}</td>
-                    <td>{{passenger.lastName}}</td>
-                    <td>{{passenger.emailId}}</td>
-                    <td>{{passenger.password}}</td>
-                    <td>{{passenger.phoneNumber}}</td>
-                    <td>{{passenger.pnrNumber}}</td>
-                    <td>{{passenger.address}}</td>
-                    <td>{{passenger.accountNumbar}}</td>
-                    <td>{{passenger.bankName}}</td>
-                    <td>{{passenger.ifscNumber}}</td>
-                    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deletePassenger(passenger.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+                <tr *ngFor="let user of user">
+                    <td>{{user.id}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.emailid}}</td>
+                    <td>{{user.password}}</td>
+                    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deletePassenger(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
                   </tr>
 
             </tbody>

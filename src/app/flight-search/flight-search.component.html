@@ -14,7 +14,9 @@
  </div>
 -->
 
-<div class="container">
+
+
+  <div class="container">
     <button type="button" class="btn btn-primary" (click)="getFlightDetails()">FindFlight</button>
 </div>
 <div class="container">
@@ -39,7 +41,13 @@
             <td>{{flight.price}}</td>
             <td>{{flight.date}}</td>
             
-            <td class="text-center" ><button class="btn btn-danger btn-xs" ><a href="/login-page" style="color: aliceblue;"><span class="glyphicon glyphicon-remove"></span> BookNow</a></button></td>
+            <td class="text-center" >
+                <input type="submit" (click)="booking()" class="btn btn-primary btn-block" value="Book Flight" >
+               <!--
+<button class="btn btn-danger btn-xs" style="color: aliceblue;"><span class="glyphicon glyphicon-remove">BookNow</span></button>
+               --> 
+            
+            </td>
           </tr>
 
     </tbody>
