@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
 
 
   flights:any;
- flight: Flight = new Flight(0,"","",0,0,"");
+ flight: Flight = new Flight();
  date!:string;
   message!: any;
   constructor(private service:PassengerRegistrationService, private router:Router) { }

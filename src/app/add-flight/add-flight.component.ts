@@ -10,7 +10,7 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
 export class AddFlightComponent implements OnInit {
 
   message: any;
-  flight: Flight = new Flight(0, "","",0,0,"",);
+  flight: Flight = new Flight();
   constructor(private service:PassengerRegistrationService) { }
   ngOnInit(): void {
   }

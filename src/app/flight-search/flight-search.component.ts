@@ -26,12 +26,8 @@ export class FlightSearchComponent implements OnInit {
     resp.subscribe((data)=>this.flight=data);
    }
  
-   booking() {
-    let resp = this.service.updateFlightDetails(this.flight);
-    resp.subscribe(data => {
-      this.message = data;
-     this.router.navigate(["/booking"])
-    });
+   booking(id :number) {
+     this.router.navigate(["booking", id])
   }
 
   }

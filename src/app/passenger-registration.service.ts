@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Flight } from './flight';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +25,10 @@ export class PassengerRegistrationService {
   }
 
      deletePassengers(id:number){
-      return this.http.delete("http://localhost:8989/FlightPassenger/passenger/delete/"+id);
+      let username='ramra'
+      let password='Ram'
+      const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+      return this.http.delete("http://localhost:9091/api/v1/delete/"+id ,{headers});
 
     }
   
@@ -70,10 +75,17 @@ export class PassengerRegistrationService {
           return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetail/"+date);
         }
 
-        updateFlightDetails(flight:any){
-          return this.http.put("http://localhost:8081/flight/update",flight);
+        updateFlightDetails(id:number, flight:Flight){
+          return this.http.put("http://localhost:8989/FlightDetails/flight/flightupdate/"+id, flight);
 
         }
+
+
+        getFlightDetailsById(id:number){
+          return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetails/"+id);
+        }
+
+        
     
   }
 

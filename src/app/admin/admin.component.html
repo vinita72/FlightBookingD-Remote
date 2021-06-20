@@ -51,7 +51,8 @@
             <th>TotalSeats</th>
             <th>Price/Fare</th>
             <th>Date</th>
-           
+            <th>Action</th>
+            <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,7 +63,7 @@
                     <td>{{flight.totalseats}}</td>
                     <td>{{flight.price}}</td>
                     <td>{{flight.date}}</td>
-                    <td class="text-center"><button class="btn btn-danger btn-xs" (click)="update()"><span class="glyphicon glyphicon-remove"></span> Update</button></td>
+                    <td class="text-center"><button class="btn btn-info btn-xs" (click)="booking(flight.id)"><span class="glyphicon glyphicon-remove"></span> Update</button></td>
                     <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteFlight(flight.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
                   </tr>
 

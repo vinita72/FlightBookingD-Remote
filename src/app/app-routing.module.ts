@@ -20,8 +20,8 @@ const routes: Routes = [
   {path:'add-flight', component:AddFlightComponent},
   {path:'flight-search',component:FlightSearchComponent},
   {path:'login-page', component:LoginPageComponent},
-  {path:'booking', component:BookingComponent},
-  {path:'update', component:UpdateComponent}
+  {path:'booking/:id', component:BookingComponent},
+  {path:'update/:id', component:UpdateComponent}
 ];
 
 @NgModule({

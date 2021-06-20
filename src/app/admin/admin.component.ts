@@ -40,9 +40,10 @@ export class AdminComponent implements OnInit {
    update(){
     this.router.navigate(['update']);
   }
-   updateFlight(){
-    let resp= this.service.updateFlightDetails(this.flight);
-    resp.subscribe((data)=>this.flight=data);
-   }
+  
+
+   booking(id :number) {
+    this.router.navigate(["update", id])
+ }
   
 }

@@ -42,7 +42,7 @@
             <td>{{flight.date}}</td>
             
             <td class="text-center" >
-                <input type="submit" (click)="booking()" class="btn btn-primary btn-block" value="Book Flight" >
+                <input type="submit" (click)="booking(flight.id)" class="btn btn-primary btn-block" value="Book Flight" >
                <!--
 <button class="btn btn-danger btn-xs" style="color: aliceblue;"><span class="glyphicon glyphicon-remove">BookNow</span></button>
                --> 
@@ -53,3 +53,7 @@
     </tbody>
 </table>
 </div>
+
+<div class="containerC" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn"><a href="/"> Back</a></button>
+  </div>
