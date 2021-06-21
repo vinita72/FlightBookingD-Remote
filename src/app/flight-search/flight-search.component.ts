@@ -9,7 +9,7 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
 })
 export class FlightSearchComponent implements OnInit {
   flight: any;
-  date:any;
+  date!:string;
   message:any;
   constructor(private service:PassengerRegistrationService, private router:Router) { }
 

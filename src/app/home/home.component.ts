@@ -23,8 +23,7 @@ export class HomeComponent implements OnInit {
   faComment=faComment;
 
 
-  flights:any;
- flight: Flight = new Flight();
+  flight:any;
  date!:string;
   message!: any;
   constructor(private service:PassengerRegistrationService, private router:Router) { }
@@ -39,9 +38,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  public findFlightByDate(){
+    let resp= this.service.searchFlightDetailsbyDate(this.date);
+    resp.subscribe((data)=>this.flight=data);
+    //this.router.navigate(["flight-search", date])
 
+   }
   
-
+   booking(id :number) {
+    this.router.navigate(["booking", id])
+ }
   //public findUserByDate(){
     //let resp= this.service.getPassengerByDate(this.date);
   //  resp.subscribe((data)=>this.flight=data);
