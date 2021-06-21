@@ -5472,3 +5472,4 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: expected ST
 2021-06-21 19:01:24,009 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-06-21 19:01:24,009 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-06-21 19:01:24,009 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\VIRAJORI\git\FlightBookingD\FlightBookingD\FlightDetails\src\test\resources
+2021-06-21 22:35:40,258 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
