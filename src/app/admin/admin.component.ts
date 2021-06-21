@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PassengerRegistrationService } from '../passenger-registration.service';
-
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -10,7 +12,9 @@ import { PassengerRegistrationService } from '../passenger-registration.service'
 export class AdminComponent implements OnInit {
   user: any;
   flight: any;
-
+  faEnvelope = faEnvelope;
+  faPlane =faPlane;
+  faPhone=faPhone;
   constructor(private service:PassengerRegistrationService, private router:Router) { }
 
   ngOnInit(): void {
@@ -21,7 +25,7 @@ export class AdminComponent implements OnInit {
     resp.subscribe(data=>this.user=data);
       }
 
-  public deletePassenger(id:number){
+   deletePassenger(id:number){
     let resp= this.service.deletePassengers(id);
     resp.subscribe((data)=>this.user=data);
    }

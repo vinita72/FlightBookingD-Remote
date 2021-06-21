@@ -1,0 +1,24 @@
+.headercontaint1 ,.headercontaint2 p{
+	color: rgb(248, 237, 237);
+
+	font-size: 16px;
+}
+header{
+	padding-top: 13px;
+	background-color:rgb(7, 6, 6);
+	height: 50px;
+}
+.headercontaint1{
+	text-align: left;
+	float: left;
+  overflow: hidden;
+}
+
+.headercontaint2{
+	text-align: right;
+	float: right;
+    overflow: hidden;
+}
+.mainheader {
+	padding: 20px;
+}

@@ -11,15 +11,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-
-    <div class="container">
-        <button type="button" class="btn btn-primary" (click)="getPassenger()">FindUsers</button>
-    </div>
-    <div class="container">
+<body >
+    <header style="margin-bottom: 4%;"> 
+        <div class="container1" style="padding-left: 50px; padding-right: 50px;">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="headercontaint1">
+                        <fa-icon [icon]="faPlane"></fa-icon> <i><b> Boieng. </b></i><em>..</em>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="headercontaint2"> 
+                        <p><fa-icon [icon]="faEnvelope"></fa-icon>
+                             Contact:  <i style="color: rgb(31, 122, 241);">feedback@boieng.com</i><span class="space"></span>   | <span class="space"></span>  <fa-icon [icon]="faPhone"></fa-icon>  Contact: (+12) 347251</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container" >
+        <button type="button" style="margin-right: 10px;" class="btn btn-primary" (click)="getPassenger()">FindUsers</button>
         <button type="button" class="btn btn-primary" (click)="getFlightDetails()">FindFlight</button>
-    </div>
-    <div class="container">
+   
+   
          <table class="table">
             <thead>
                 <tr>

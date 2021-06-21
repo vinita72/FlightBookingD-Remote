@@ -21,8 +21,8 @@ export class FlightSearchComponent implements OnInit {
    }
  
 
-   public findUserByDate(){
-    let resp= this.service.getPassengerByDate(this.date);
+   public findFlightByDate(){
+    let resp= this.service.searchFlightDetailsbyDate(this.date);
     resp.subscribe((data)=>this.flight=data);
    }
  

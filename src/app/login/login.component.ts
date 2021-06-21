@@ -9,8 +9,10 @@ import { Users } from '../users';
 })
 export class LoginComponent implements OnInit {
   message: any;
-  
+  username!: string;
+  password!: string;
   users: Users = new Users("","","","","");
+  payment: any;
   constructor(private service:PassengerRegistrationService, private router:Router) { }
 
   ngOnInit(): void {
@@ -21,10 +23,10 @@ export class LoginComponent implements OnInit {
      // }
 
       loginNow() {
-        let resp = this.service.dologin(this.users);
+        let resp = this.service.dologin(this.username, this.password);
         resp.subscribe(data => {
           this.message = data;
-         this.router.navigate(["/booking"])
+         this.router.navigate(["/payment"])
         });
       }
 

@@ -8,6 +8,7 @@ import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LoginComponent } from './login/login.component';
+import { PaymentComponent } from './payment/payment.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UpdateComponent } from './update/update.component';
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'flight-search',component:FlightSearchComponent},
   {path:'login-page', component:LoginPageComponent},
   {path:'booking/:id', component:BookingComponent},
-  {path:'update/:id', component:UpdateComponent}
+  {path:'update/:id', component:UpdateComponent},
+  {path:'payment', component:PaymentComponent}
 ];
 
 @NgModule({

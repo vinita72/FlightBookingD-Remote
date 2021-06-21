@@ -1,4 +1,44 @@
 <div class="container">
+
+<div class="details">
+    <h2><b><fa-icon [icon]="faPlaneDeparture"></fa-icon> Booking Details  </b></h2>
+    <div class="data">
+        <label> <b> From Location: </b></label> {{flight.fromlocation}}
+    </div>
+    <div class="data">
+        <label> <b> To Location : </b></label> {{flight.tolocation}}
+    </div>
+    <div class="data">
+        <label> <b> Total Seats : </b></label> {{flight.totalseats}}
+
+    </div>
+    <div class="data">
+        <label> <b> Price/Fare :</b></label> {{flight.price}}
+    </div>
+    <div class="data"> 
+        <label> <b>Date : </b></label> {{flight.date}}
+    </div>
+
+    <div class="containerC" style="background-color:#f1f1f1; font-size:larger;">
+        <a href="/login-page"> <button type="button" class="confirm"> Confirm and Proceed<span>...</span><fa-icon [icon]="faPlaneDeparture"></fa-icon></button></a>
+      </div>            
+    
+    <div class="containerC" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn"><a href="/flight-search"> Back</a></button>
+    </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<!--
+<div class="container">
     <h2>Add Flight Details</h2>
     <form >
         <fieldset>
@@ -36,6 +76,9 @@
     </form>
 
 </div>
+
+-->
+
 
 
 

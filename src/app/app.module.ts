@@ -18,6 +18,8 @@ import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { BookingComponent } from './booking/booking.component';
 import { UpdateComponent } from './update/update.component';
+import { PaymentComponent } from './payment/payment.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { UpdateComponent } from './update/update.component';
     LoginPageComponent,
     BookingComponent,
     UpdateComponent,
+    PaymentComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,8 @@ form {
   }
   /* Add padding to containers */
   .container {
+    margin-top: 4%;
+
     padding: 16px;
     padding-left: 200px;
   }

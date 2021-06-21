@@ -15,8 +15,18 @@ export class PassengerRegistrationService {
     return this.http.post("http://localhost:9091/api/v1/users",users,{responseType:'text' as 'json'});
   }
 
-  public dologin(passenger:any){
-    return this.http.post("http://localhost:8989/FlightPassenger/passenger/loginhere/",passenger,{responseType:'text' as 'json'});
+   dologin(username:string,password:string){
+    const headers = new HttpHeaders({ Authorization: 'Basic Auth' + btoa(username + ':' + password) });
+    return this.http.get("http://localhost:9091/api/v1/",{headers,responseType: 'text' as 'json'})
+  }
+
+
+  deletePassengers(id:number){
+      let username='ramra'
+        let password='Ram'
+        const headers = new HttpHeaders({ Authorization: 'Basic Auth' + btoa(username + ':' + password) });
+    return this.http.delete("http://localhost:9091/api/v1/delete/"+id, {headers});
+
   }
 
   public addFlightDetails(flight:any){
@@ -24,13 +34,7 @@ export class PassengerRegistrationService {
 
   }
 
-     deletePassengers(id:number){
-      let username='ramra'
-      let password='Ram'
-      const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
-      return this.http.delete("http://localhost:9091/api/v1/delete/"+id ,{headers});
-
-    }
+     
   
 
     login(adminusername:string,adminpassword:string){
@@ -57,8 +61,8 @@ export class PassengerRegistrationService {
 
       }
 
-      searchFlightDetailsbyid(date:string){
-        return this.http.get("http://localhost:8081/flight/findAllFlightDetail/"+date);
+      searchFlightDetailsbyDate(date:string){
+        return this.http.get("http://localhost:8081/flight/findAllFlightDetail/" +date);
 
       }
 
@@ -85,7 +89,10 @@ export class PassengerRegistrationService {
           return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetails/"+id);
         }
 
-        
+        payemntDetails(FlightPayment:any){
+          return this.http.post("http://localhost:8082/submitPaymentDetail", FlightPayment);
+
+        }
     
   }
 
