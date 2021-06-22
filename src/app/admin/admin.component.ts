@@ -15,6 +15,8 @@ export class AdminComponent implements OnInit {
   faEnvelope = faEnvelope;
   faPlane =faPlane;
   faPhone=faPhone;
+  username!: string;
+  password!: string;
   constructor(private service:PassengerRegistrationService, private router:Router) { }
 
   ngOnInit(): void {
@@ -26,7 +28,7 @@ export class AdminComponent implements OnInit {
       }
 
    deletePassenger(id:number){
-    let resp= this.service.deletePassengers(id);
+    let resp= this.service.deletePassengers(id, this.username, this.password);
     resp.subscribe((data)=>this.user=data);
    }
    

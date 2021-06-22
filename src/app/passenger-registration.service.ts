@@ -16,15 +16,14 @@ export class PassengerRegistrationService {
   }
 
    dologin(username:string,password:string){
-    const headers = new HttpHeaders({ Authorization: 'Basic Auth' + btoa(username + ':' + password) });
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.http.get("http://localhost:9091/api/v1/",{headers,responseType: 'text' as 'json'})
   }
 
 
-  deletePassengers(id:number){
-      let username='ramra'
-        let password='Ram'
-        const headers = new HttpHeaders({ Authorization: 'Basic Auth' + btoa(username + ':' + password) });
+  deletePassengers(id:number,username:string,password:string){
+    
+        const headers = new HttpHeaders({ Authorization: 'Basic' + btoa(username + ':' + password) });
     return this.http.delete("http://localhost:9091/api/v1/delete/"+id, {headers});
 
   }
@@ -34,8 +33,7 @@ export class PassengerRegistrationService {
 
   }
 
-     
-  
+   
 
     login(adminusername:string,adminpassword:string){
       const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(adminusername + ':' + adminpassword) });
@@ -62,7 +60,7 @@ export class PassengerRegistrationService {
       }
 
       searchFlightDetailsbyDate(date:string){
-        return this.http.get("http://localhost:8081/flight/findAllFlightDetail/" +date);
+        return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetail/" +date);
 
       }
 
@@ -90,9 +88,17 @@ export class PassengerRegistrationService {
         }
 
         payemntDetails(FlightPayment:any){
-          return this.http.post("http://localhost:8082/submitPaymentDetail", FlightPayment);
+          return this.http.get("http://localhost:8082/", FlightPayment);
 
         }
     
+
+
+        googlesign(id:number, email:string,password:string){
+          const headers = new HttpHeaders({ Authorization: 'OAuth 2.0 ' + btoa(email + ':' + password) });
+          return this.http.get("http://localhost:8084/" +id ,{headers,responseType: 'text' as 'json'});
+
+        }
+
   }
 

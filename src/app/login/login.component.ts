@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PassengerRegistrationService } from '../passenger-registration.service';
 import { Users } from '../users';
+import {faUserAlt } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,6 +15,7 @@ export class LoginComponent implements OnInit {
   password!: string;
   users: Users = new Users("","","","","");
   payment: any;
+  faUserAlt=faUserAlt;
   constructor(private service:PassengerRegistrationService, private router:Router) { }
 
   ngOnInit(): void {

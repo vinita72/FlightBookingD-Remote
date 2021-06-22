@@ -18,11 +18,10 @@
 		<h2>Registration Form</h2>
 		<form>
 			<fieldset>
-				<legend class="text-center">Valid information is required to register. <span class="req"><small>
+				<legend class="text-center">User Registration. <span class="req"><small>
 					required *</small></span></legend>
 					<div class="imgcontainer">
-						<img src="img_avatar2.png" alt="Avatar" class="avatar">
-				 	 </div>
+						<fa-icon [icon]="faUserAlt"></fa-icon>				 	 </div>
 					  <label for="id"><b><span class="req">* </span>ID</b></label>
 					  <input type="text" [(ngModel)]="users.id" placeholder="Enter ID" maxlength="28" name="id" required>
 

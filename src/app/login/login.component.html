@@ -8,31 +8,30 @@
   <title>Document</title>
 </head>
 <body>
-  <div style="text-align: center">
+  <div style="text-align: center;">
 		<h1>{{message}}</h1>
 	</div>
   <div class="container">
-    <h2>Login Form</h2>
+    <h2>     </h2>
     <form action="">
         <div class="imgcontainer">
-          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          <fa-icon [icon]="faUserAlt"></fa-icon>
         </div>
         
-          <label for="username"><b>username</b></label>
-          <input type="text" [(ngModel)]="users.username" placeholder="Enter EmailId" name="username"  required>
+          <label for="username"><b>User Name</b></label>
+          <input type="text" [(ngModel)]="username" placeholder="Enter User Name" name="username"  required>
     
           <label for="psw"><b>Password</b></label>
-          <input type="password" [(ngModel)]="users.password" placeholder="Enter Password" name="psw"  required>
+          <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw"  required>
     
-          <input class="btn btn-info" type="submit" name="submit_reg" value="LogIn" (click)="loginNow()">
-          <label>
+          <input class="btn btn-info" style="margin-top: 20px; background-color: rgb(49, 3, 250); margin-bottom: 20px; width: 30%; height: 50px; color: white;"  type="submit" name="submit_reg" value="LogIn and Proceed" (click)="loginNow()">
+          <label style="float: right;">
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
       
       
         <div class="containerC" style="background-color:#f1f1f1">
           <button type="button" class="cancelbtn"><a href="">Cancel</a></button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form>
     </div>

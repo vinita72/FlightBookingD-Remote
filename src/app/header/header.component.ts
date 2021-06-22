@@ -4,6 +4,7 @@ import { faPlane } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import {faComment } from '@fortawesome/free-solid-svg-icons';
 import {faHashtag } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
