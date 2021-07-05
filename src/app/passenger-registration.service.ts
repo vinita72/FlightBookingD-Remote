@@ -48,10 +48,7 @@ export class PassengerRegistrationService {
 
 
       getFlight(){
-        let adminusername='Java'
-        let adminpassword='Password'
-        const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(adminusername + ':' + adminpassword) });
-      return  this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetails/",{headers});
+      return  this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetails/");
       }
 
       deleteFlightDetails(id:number){
@@ -64,6 +61,21 @@ export class PassengerRegistrationService {
 
       }
 
+      public getPassengerByDate(date: string){
+        return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetail/"+date);
+      }
+
+      updateFlightDetails(id:number, flight:Flight){
+        return this.http.put("http://localhost:8989/FlightDetails/flight/flightupdate/"+id, flight);
+
+      }
+
+
+      getFlightDetailsById(id:number){
+        return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetails/"+id);
+      }
+
+
      
       searchFlightDetails(flight:any){
 
@@ -73,20 +85,7 @@ export class PassengerRegistrationService {
 
 
       
-        public getPassengerByDate(date: string){
-          return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetail/"+date);
-        }
-
-        updateFlightDetails(id:number, flight:Flight){
-          return this.http.put("http://localhost:8989/FlightDetails/flight/flightupdate/"+id, flight);
-
-        }
-
-
-        getFlightDetailsById(id:number){
-          return this.http.get("http://localhost:8989/FlightDetails/flight/findAllFlightDetails/"+id);
-        }
-
+        
         payemntDetails(FlightPayment:any){
           return this.http.get("http://localhost:8082/", FlightPayment);
 

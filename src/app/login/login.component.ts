@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { PassengerRegistrationService } from '../passenger-registration.service';
 import { Users } from '../users';
 import {faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +11,30 @@ import {faUserAlt } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+ 
+
+
   message: any;
   username!: string;
   password!: string;
   users: Users = new Users("","","","","");
   payment: any;
   faUserAlt=faUserAlt;
-  constructor(private service:PassengerRegistrationService, private router:Router) { }
+
+
+
+  contactForm!:FormGroup;
+  contact={
+    username:'',
+    password:''
+  };
+  submitted=false;
+
+  
+  constructor(private service:PassengerRegistrationService, private router:Router) { 
+    this.creatForm();
+
+  }
 
   ngOnInit(): void {
   }
@@ -25,7 +43,7 @@ export class LoginComponent implements OnInit {
    // resp.subscribe((data)=>this.message=data);
      // }
 
-      loginNow() {
+      loginNow(){
         let resp = this.service.dologin(this.username, this.password);
         resp.subscribe(data => {
           this.message = data;
@@ -33,4 +51,19 @@ export class LoginComponent implements OnInit {
         });
       }
 
+  creatForm():void {
+    this.contactForm = new FormGroup({
+      'username': new FormControl(this.contact.username,[
+        Validators.required,
+        Validators.minLength(4)
+      ]),
+      'password': new FormControl(this.contact.password,[
+        Validators.required,
+        Validators.minLength(6)
+      ]),
+      
+      });    
+        }  
+
+ 
 }

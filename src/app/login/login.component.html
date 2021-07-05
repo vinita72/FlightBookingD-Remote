@@ -13,18 +13,21 @@
 	</div>
   <div class="container">
     <h2>     </h2>
-    <form action="">
+    <form action="" id="contact-form" [formGroup]="contactForm" (click)="loginNow()" novalidate>
         <div class="imgcontainer">
           <fa-icon [icon]="faUserAlt"></fa-icon>
         </div>
         
           <label for="username"><b>User Name</b></label>
-          <input type="text" [(ngModel)]="username" placeholder="Enter User Name" name="username"  required>
+          <input type="text" [(ngModel)]="username" placeholder="Enter User Name" formControlName="username"  required>
     
           <label for="psw"><b>Password</b></label>
-          <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw"  required>
-    
+          <input type="password" [(ngModel)]="password" placeholder="Enter Password" formControlName="password"  required>
+    <!--
           <input class="btn btn-info" style="margin-top: 20px; background-color: rgb(49, 3, 250); margin-bottom: 20px; width: 30%; height: 50px; color: white;"  type="submit" name="submit_reg" value="LogIn and Proceed" (click)="loginNow()">
+    -->
+    <button type="submit" [disabled]="!contactForm.valid" class="btn btn-success" style="margin-top: 20px; background-color: rgb(49, 3, 250); margin-bottom: 20px; width: 30%; height: 50px; color: white;"><a href="/payment" style="color: white;">Login</a></button>
+
           <label style="float: right;">
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
@@ -32,6 +35,7 @@
       
         <div class="containerC" style="background-color:#f1f1f1">
           <button type="button" class="cancelbtn"><a href="">Cancel</a></button>
+          <span class="psw">For <a href="/registration">Sign Up</a></span>
         </div>
       </form>
     </div>

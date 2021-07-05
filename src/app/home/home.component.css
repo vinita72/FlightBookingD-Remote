@@ -145,7 +145,7 @@ p {
   box-shadow: 0px 43px 83px -20px rgba(0, 0, 0, 0.41);
   background: linear-gradient(-60deg, #f8e3dd, #fae0ea, #e9f7fc, #f5faf9);
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 7s ease infinite;
 }
 
 @keyframes gradient {

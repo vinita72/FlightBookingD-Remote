@@ -16,34 +16,38 @@
 		<h1>{{message}}</h1>
 	</div>
 		<h2>Registration Form</h2>
-		<form>
+		<form action="" id="contact-form" [formGroup]="contactForm" (click)="registerNow()" novalidate>
 			<fieldset>
 				<legend class="text-center">User Registration. <span class="req"><small>
 					required *</small></span></legend>
 					<div class="imgcontainer">
 						<fa-icon [icon]="faUserAlt"></fa-icon>				 	 </div>
 					  <label for="id"><b><span class="req">* </span>ID</b></label>
-					  <input type="text" [(ngModel)]="users.id" placeholder="Enter ID" maxlength="28" name="id" required>
+					  <input type="text" [(ngModel)]="users.id" placeholder="Enter ID" maxlength="28" formControlName="id" required>
 
 					<label for="fname"><b><span class="req">* </span>UserName</b></label>
-					  <input type="text" [(ngModel)]="users.username" placeholder="Enter FirstName" maxlength="28" name="fname" required>
+					  <input type="text" [(ngModel)]="users.username" placeholder="Enter FirstName" maxlength="28" formControlName="username" required>
 					  
 					  <label for="email"><b><span class="req">* </span>EmailId</b></label>
-					  <input type="text" [(ngModel)]="users.emailid" placeholder="Enter EmailId" name="email" required>
+					  <input type="text" [(ngModel)]="users.emailid" placeholder="Enter EmailId" formControlName="email" required>
 				  
 					  <label for="psw"><b><span class="req">* </span>Password</b></label>
-					  <input type="password" [(ngModel)]="users.password" placeholder="Enter Password" name="psw" required>
+					  <input type="password" [(ngModel)]="users.password" placeholder="Enter Password" formControlName="password" required>
 					  
 			
 	  
-					  <input class="btn btn-info" style="margin-top: 20px; background-color: rgb(49, 3, 250); margin-bottom: 20px; width: 30%; height: 50px;" type="submit" 
+					 <!--
+
+<input class="btn btn-info" style="margin-top: 20px; background-color: rgb(49, 3, 250); margin-bottom: 20px; width: 30%; height: 50px;" type="submit" 
 					  name="submit_reg" value="Register" (click)="registerNow()">
+					 --> 
 					  
-				
+					 <button type="submit" [disabled]="!contactForm.valid" class="btn btn-success" style="margin-top: 20px; background-color: rgb(49, 3, 250); margin-bottom: 20px; width: 30%; height: 50px; color: white;"><a href="/" style="color: white;">Register</a></button>
+
 				
 				  <div class="containerC" style="background-color:#f1f1f1; width: 100%;">
 					<button type="button" class="cancelbtn"><a href="/">Cancel</a></button>
-					<span class="psw">Back To <a href="/">Home</a></span>
+					<span class="psw">For <a href="/login">Sign In</a></span>
 				  </div>
 			
 
